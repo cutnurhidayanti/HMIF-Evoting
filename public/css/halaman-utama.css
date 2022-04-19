@@ -1,0 +1,39 @@
+body {
+    background-color: #2B2974;
+    
+}
+
+
+.navbar {
+    padding-top: 20px;
+    background-color: #2B2974;
+}
+
+.nav-item {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar-brand {
+    font-size: 25px;
+}
+
+.nav-link {
+    font-size: 25px;
+}
+
+.jumbotron {
+    padding-top: 40px;
+    color: white;
+    padding-left: 4em;
+}
+
+#vote{
+    padding-left: 2em;
+}
+
+.jumbotron .row .d-flex .lead{
+    font-size: 18px;
+    padding-top: 20px;
+}

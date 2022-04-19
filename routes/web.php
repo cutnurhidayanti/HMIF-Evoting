@@ -13,6 +13,39 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// bagian mahasiswa
 Route::get('/', function () {
-    return view('welcome');
+    return view('user/halaman-utama');
+});
+
+Route::get('/login', function () {
+    return view('user/Login');
+});
+
+Route::get('/signup', function () {
+    return view('user/signup');
+});
+
+Route::get('/beranda', function () {
+    return view('user/beranda');
+});
+
+Route::get('/profil', function () {
+    return view('user/profil');
+});
+
+Route::get('/daftar-calon', function () {
+    return view('user/daftar-calon');
+});
+
+Route::get('/deskripsi-calon', function () {
+    return view('user/deskripsi-calon');
+});
+
+Route::get('/voting', function () {
+    return view('user/voting');
+});
+
+Route::get('/real-count', function () {
+    return view('user/real-count');
 });

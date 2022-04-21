@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 // bagian mahasiswa
-Route::get('/', function () {
+Route::get('/', function () { //fix
     return view('user/halaman-utama');
 });
 
-Route::get('/login', function () {
-    return view('user/Login');
+Route::get('/user-login', function () { //to do
+    return view('user/user-login');
 });
 
 Route::get('/signup', function () {
@@ -48,4 +48,9 @@ Route::get('/voting', function () {
 
 Route::get('/real-count', function () {
     return view('user/real-count');
+});
+
+// bagian admin
+Route::get('/admin-login', function () {
+    return view('admin/admin-login');
 });

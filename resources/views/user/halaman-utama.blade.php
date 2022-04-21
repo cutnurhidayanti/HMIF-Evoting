@@ -11,7 +11,7 @@
         {{-- css custom --}}
         <link rel="stylesheet" href="css/halaman-utama.css">
 
-        <title>Hello, world!</title>
+        <title>HMIF | Halaman Utama</title>
     </head>
     <body>
         {{-- navbar --}}
@@ -50,7 +50,8 @@
                             <h1 class="display-2"><strong>Informatika E-Voting</strong></h1>
                             <h1 class="display-3"><strong>Universitas Syiah Kuala</strong></h1>
                             <p class="lead">Bersama Himpunan Mahasiswa Informatika Universitas Syiah Kuala menciptakan mahasiswa yang aktif, interaktif, kreatif serta inovatif dalam bidang iptek dan imtaq. Dan menciptakan dan meningkatkan rasa kekeluargaan antar seluruh anggota Himpunan Mahasiswa Informatika.</p>
-                            <button class="button readmore">Read More ></button>
+                            {{-- button read more --}}
+                            <button class="button readmore" href="read-more">Read More ></button>  {{-- ini perhatikan lagi --}}
                         </div>
                         {{-- gambar --}}
                         <img id="vote" src="img/Voting.png" alt="voting">

@@ -31,10 +31,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="signup">Sign Up</a>
+                            <a class="nav-link {{ ($tittle === "Home") ? 'active' : '' }}" aria-current="page" href="signup">Sign Up</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login">Log In</a>
+                            <a class="nav-link {{ ($tittle === "Home") ? 'active' : '' }}" href="user-login">Log In</a>
                         </li>
                     </ul>
                 </div>
@@ -64,6 +64,10 @@
             </div>
             {{-- akhir jumbotron --}}
 
+            {{-- evoting mark --}}
+            <div class="evoting-mark">
+                <p><strong>VALORANTGO</strong></p>
+            </div>
             
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

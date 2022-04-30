@@ -11,7 +11,7 @@
         {{-- css custom --}}
         <link rel="stylesheet" href="css/halaman-utama.css">
 
-        <title>HMIF | Halaman Utama</title>
+        <title>HMIF | {{ $tittle }}</title>
     </head>
     <body>
         {{-- navbar --}}

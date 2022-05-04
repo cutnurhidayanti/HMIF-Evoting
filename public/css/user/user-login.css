@@ -8,15 +8,14 @@
 }
 
 .form-signin h2, .form-signup h2  {
-  /* font-size: 35px; */
   text-align: center;
 }
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
+  padding: 10px;
+  /* margin: 5px 0 22px 0; */
   display: inline-block;
   border: none;
   background: #f1f1f1;
@@ -54,12 +53,17 @@ a {
   display: flex;
 }
 
+.form-group img {
+  height: 50px;
+}
+
 .daftar {
   /* margin: 20px 20px; */
   border-radius: 15px;
   padding: 15px 15px;
   color: black;
 }
+
 
 
 

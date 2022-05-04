@@ -16,61 +16,61 @@ use Illuminate\Support\Facades\Route;
 // bagian mahasiswa
 Route::get('/', function () { //fix
     return view('user/halaman-utama', [
-        'tittle' => "halaman-utama",
+        'tittle' => "Halaman Utama",
     ]);
 });
 
 Route::get('/user-login', function () { //to do
     return view('user/user-login', [
-        'tittle' => "user-login",
+        'tittle' => "User Login",
     ]);
 });
 
 Route::get('/signup', function () {
     return view('user/signup', [
-        'tittle' => "signup",
+        'tittle' => "User SignUp",
     ]);
 });
 
 Route::get('/beranda', function () {
     return view('user/beranda', [
-        'tittle' => "beranda",
+        'tittle' => "Beranda",
     ]);
 });
 
 Route::get('/profil', function () {
     return view('user/profil', [
-        'tittle' => "profil",
+        'tittle' => "Profil User",
     ]);
 });
 
 Route::get('/daftar-calon', function () {
     return view('user/daftar-calon', [
-        'tittle' => "daftar-calon",
+        'tittle' => "Daftar Calon",
     ]);
 });
 
 Route::get('/deskripsi-calon', function () {
     return view('user/deskripsi-calon', [
-        'tittle' => "deskripsi-calon",
+        'tittle' => "Deskripsi Calon",
     ]);
 });
 
 Route::get('/voting', function () {
     return view('user/voting', [
-        'tittle' => "voting",
+        'tittle' => "Voting",
     ]);
 });
 
 Route::get('/real-count', function () {
     return view('user/real-count', [
-        'tittle' => "real-count",
+        'tittle' => "Real Count",
     ]);
 });
 
 // bagian admin
 Route::get('/admin-login', function () {
     return view('admin/admin-login', [
-        'tittle' => "admin-login",
+        'tittle' => "Admin Login",
     ]);
 });

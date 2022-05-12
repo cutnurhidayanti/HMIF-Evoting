@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\SignupController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/user-login', [LoginController::class, 'index']);
+
+Route::get('/signup', [SignupController::class, 'index']);
+Route::post('/signup', [SignupController::class, 'store']);
+
 // bagian mahasiswa
 Route::get('/', function () { //fix
     return view('user/halaman-utama', [
@@ -20,11 +27,11 @@ Route::get('/', function () { //fix
     ]);
 });
 
-Route::get('/user-login', function () { //to do
-    return view('user/user-login', [
-        'tittle' => "User Login",
-    ]);
-});
+// Route::get('/user-login', function () { //to do
+//     return view('user/user-login', [
+//         'tittle' => "User Login",
+//     ]);
+// });
 
 Route::get('/signup', function () {
     return view('user/signup', [
@@ -72,5 +79,11 @@ Route::get('/real-count', function () {
 Route::get('/admin-login', function () {
     return view('admin/admin-login', [
         'tittle' => "Admin Login",
+    ]);
+});
+
+Route::get('/main', function () {
+    return view('layouts/main', [
+        'tittle' => "main",
     ]);
 });

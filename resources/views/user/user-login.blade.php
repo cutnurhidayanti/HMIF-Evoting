@@ -4,6 +4,12 @@
 
 <div class="row justify-content-center">
     <div class="col-md-5">
+        @if(session()->has('status'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert" style="border-radius: 15px">
+                <strong>{{ session('status') }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <main class="form-signin">
             <form action="/daftar" method="post" class="daftar">
                 @csrf

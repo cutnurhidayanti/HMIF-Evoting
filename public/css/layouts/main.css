@@ -1,0 +1,86 @@
+body{
+    background-color:#2B2974;
+}
+
+.logo-profil {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.profil {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo-text {
+    text-align: center;
+}
+
+.logo img {
+    width: 50px; 
+    height:50px;
+    margin-right: 15px;
+}
+
+.profil img {
+    /* margin-right: 15px; */
+}
+
+
+
+.navbar-brand{
+    font-size: 30px;
+}
+
+#mySidenav a {
+    position: absolute; /* Position them relative to the browser window */
+    left: -80px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    width: 150px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+  }
+  
+  #mySidenav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+  }
+  
+  .sidenav{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  #mySidenav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+  }
+  
+  /* The about link: 20px from the top with a green background */
+  #about {
+    top: 20px;
+    background-color: #9c6644;
+  }
+  
+  #blog {
+    top: 80px;
+    background-color: #7f5539; /* Blue */
+  }
+  
+  #projects {
+    top: 140px;
+    background-color: #b08968; /* Red */
+  }
+  
+  #contact {
+    top: 200px;
+    background-color: #ddb892 /* Light Black */
+  }
+
+

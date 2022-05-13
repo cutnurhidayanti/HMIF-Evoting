@@ -4,18 +4,35 @@
 
 <div class="row justify-content-center">
     <div class="col-md-5">
+        @if(session()->has('status'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert" style="border-radius: 15px">
+                <strong>{{ session('status') }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+        @if(session()->has('loginError'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert" style="border-radius: 15px">
+                <strong>{{ session('loginError') }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <main class="form-signin">
-            <form action="/daftar" method="post" class="daftar">
-                @csrf
+            <form action="/user-login" method="post" class="daftar">
+                @csrf 
                     <h2>Login</h2>
                     <form>
                         <div class="form-group">
                             <img src="icon/nim-login.png" alt="icon-login">
-                            <input type="textarea" name="nim" class="form-control" placeholder="NIM">
+                            <input type="textarea" name="nim" class="form-control @error('nim') is-invalid @enderror" placeholder="NIM" required>
+                            @error('nim')
+                            <div class="invalid-feedback">
+                                {{ $message  }}
+                            </div>
+                            @enderror        
                         </div>
                         <div class="form-group">
                             <img src="icon/pass-login.png" alt="key-login">
-                            <input type="password" name="password" class="form-control" placeholder="Password">
+                            <input type="password" name="password" class="form-control" placeholder="Password" required>
                         </div>
                         
                         <center><div class="btn-regist">

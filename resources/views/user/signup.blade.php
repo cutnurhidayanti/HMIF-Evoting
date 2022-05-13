@@ -28,39 +28,66 @@
         <div class="row justify-content-center">
             <div class="col-md-5">
                 <main class="form-signup">
-                    <form action="/daftar" method="post" class="daftar">
+                    <form action="/signup" method="post" class="daftar">
                         @csrf
                             <h2>Register</h2>
                             <form>
                                 <div class="form-group">
                                     <img src="icon/nim-login.png" alt="icon-login">
-                                    <input type="textarea" name="nama" class="form-control" placeholder="Nama">
+                                    <input type="textarea" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="name" required>
+                                    @error('name')
+                                        <div class="invalid-feedback">
+                                            {{ $message  }}
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <img src="icon/nim-login.png" alt="icon-login">
-                                    <input type="textarea" name="nim" class="form-control" placeholder="NIM">
+                                    <input type="textarea" name="nim" class="form-control @error('nim') is-invalid @enderror" placeholder="NIM" required>
+                                    @error('nim')
+                                    <div class="invalid-feedback">
+                                        {{ $message  }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <img src="icon/nim-login.png" alt="icon-login">
-                                    <input type="textarea" name="email" class="form-control" placeholder="Email">
+                                    <input type="textarea" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email" required>
+                                    @error('email')
+                                    <div class="invalid-feedback">
+                                        {{ $message  }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <img src="icon/pass-login.png" alt="key-login">
-                                    <input type="password" name="password" class="form-control" placeholder="Password">
+                                    <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" required>
+                                    @error('password')
+                                    <div class="invalid-feedback">
+                                        {{ $message  }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <img src="icon/pass-login.png" alt="key-login">
-                                    <input type="password" name="confirm-password" class="form-control" placeholder="Confirm Password">
+                                    <input type="password" name="confirm_password" class="form-control @error('confirm_password') is-invalid @enderror" placeholder="Confirm Password" required>
+                                    @error('confirm_password')
+                                    <div class="invalid-feedback">
+                                        {{ $message  }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 
-                                <center><div class="btn-regist mt-1 mb-1">
-                                    <a href="user-login">
-                                        <img src="icon/signup.png" alt="signup-btn" style="height: 60px">
-                                    </a>
+                                <center><div class="btn-regist mt-1 mb-1" type="submit">
+                                    <button>
+                                        <a href="user-login">
+                                            <img src="icon/signup.png" alt="signup-btn" style="height: 60px">
+                                        </a>
+                                    </button>
                                 </div></center>
             
                                 <div class="container-signin" style="text-align: center">
-                                    <p>Already have an account? <a href="user-login">Sign in</a>.</p>
+                                    <p>Already have an account? <a href="user-login">Sign in</a></p>
                                 </div>
                             </form>
                     </form>

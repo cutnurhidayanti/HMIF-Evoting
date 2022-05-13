@@ -29,20 +29,33 @@
                 </div>
             </div>
             <div class="profil">
-                <h5>Anas Naufal Alkiram</h5>
+                <h5>{{ auth()->user()->name}}</h5>
                 <img src="icon/nim-login.png" alt="person">
             </div>
         </div>
 
         {{-- Navbar --}}
         <div id="mySidenav" class="sidenav">
-            <a href="#" id="about">About</a>
-            <a href="#" id="blog">Blog</a>
-            <a href="https://github.com/Mizuru21-prog?tab=repositories" id="projects">Projects</a>
-            <a href="contact.html" id="contact">Contact</a>
+            <a href="#" id="Beranda">Beranda</a>
+            <a href="#" id="Daftar-Calon">Daftar Calon</a>
+            <a href="#" id="Voting">Voting</a>
+            <a href="#" id="Real-Count">Real Count</a>
+            
+            <form action="/logout" method="post">
+                @csrf
+                {{-- <button>
+                    <a href="#">Logout</a>
+                </button> --}}
+                
+                <button type="submit" id="Logout">Logout</button>
+            </form>
         </div>
         {{-- akhir Navbar --}}
 
+        <div class="container">
+            @yield('container')
+        </div>
+        
         <!-- Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

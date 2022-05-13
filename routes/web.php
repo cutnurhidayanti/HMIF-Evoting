@@ -1,8 +1,12 @@
 <?php
 
+use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,33 +19,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/user-login', [LoginController::class, 'index']);
+Route::get('/user-login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/user-login', [LoginController::class, 'store']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/signup', [SignupController::class, 'index']);
+Route::get('/signup', [SignupController::class, 'index'])->middleware('guest');
 Route::post('/signup', [SignupController::class, 'store']);
+// Route::get('/confirm-password', [SignupController::class, 'confirmpass'])->name('password.confirm')->middleware('auth');
+// Route::get('/confirm-password', [SignupController::class, 'confirmpass_algoritm'])->middleware(['auth', 'throttle:6,1']);
+
+Route::get('/beranda', [BerandaController::class, 'index'])->middleware('auth');
 
 // bagian mahasiswa
 Route::get('/', function () { //fix
     return view('user/halaman-utama', [
         'tittle' => "Halaman Utama",
-    ]);
-});
-
-// Route::get('/user-login', function () { //to do
-//     return view('user/user-login', [
-//         'tittle' => "User Login",
-//     ]);
-// });
-
-Route::get('/signup', function () {
-    return view('user/signup', [
-        'tittle' => "User SignUp",
-    ]);
-});
-
-Route::get('/beranda', function () {
-    return view('user/beranda', [
-        'tittle' => "Beranda",
     ]);
 });
 

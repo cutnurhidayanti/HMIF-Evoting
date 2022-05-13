@@ -31,10 +31,13 @@ body{
     /* margin-right: 15px; */
 }
 
-
-
 .navbar-brand{
     font-size: 30px;
+}
+
+#mySidenav{
+  position: sticky;
+  background-color: #C2C4F9;
 }
 
 #mySidenav a {
@@ -63,24 +66,28 @@ body{
   }
   
   /* The about link: 20px from the top with a green background */
-  #about {
+  #Beranda {
     top: 20px;
-    background-color: #9c6644;
+    background-color: #C2C4F9;
   }
   
-  #blog {
+ #Daftar-Calon {
     top: 80px;
-    background-color: #7f5539; /* Blue */
+    background-color: #C2C4F9; /* Blue */
   }
   
-  #projects {
+  #Voting {
     top: 140px;
-    background-color: #b08968; /* Red */
+    background-color: #C2C4F9; /* Red */
   }
   
-  #contact {
+  #Real-Count {
     top: 200px;
-    background-color: #ddb892 /* Light Black */
+    background-color: #C2C4F9; /* Red */
   }
 
-
+  #Logout {
+    top: 260px;
+    background-color: #C2C4F9; /* Red */
+  }
+  

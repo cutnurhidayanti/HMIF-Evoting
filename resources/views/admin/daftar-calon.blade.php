@@ -2,9 +2,9 @@
 
 @section('container')
     <h3>Data Calon Ketua HMIF</h3>
-    <a href="/add-calon">+ Add New User</a><br><br>
+    <a href="/add-calon" class="btn btn-info">+ Add New User</a><br><br>
     
-    <table class="table table-bordered mt-1">
+    <table class="table table-bordered mt-1" style="color: white">
         <tr>
             <th scope="col">No.Urut</th>
             <th scope="col">Foto</th>

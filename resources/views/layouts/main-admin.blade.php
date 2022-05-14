@@ -15,6 +15,9 @@
         {{-- fav icon --}}
         <link rel="shortcut icon" href="img/informatics-logo-hd.png" type="image/x-icon">
 
+        {{-- custom css --}}
+        <link rel="stylesheet" href="css/user/signup.css">
+
         <title>HMIF | {{ $tittle }}</title>
     </head>
     <body>

@@ -90,7 +90,9 @@ Route::get('/real-count', function () {
 
 // bagian admin
 Route::get('/admin-login', [AdminController::class, 'index']);
+
 Route::get('/daftar-calon', [AdminController::class, 'data_calon']);
 Route::get('/add-calon', [AdminController::class, 'create']);
+Route::post('/add-calon', [AdminController::class, 'store']);
 
 Route::get('/beranda-admin', [BerandaController::class, 'admin']);

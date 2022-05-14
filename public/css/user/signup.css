@@ -37,13 +37,13 @@ body {
 }
 
 /* Add padding to containers */
-.form-signup {
+.form-signup, .form-add-calon {
     background-color: white;
     border-radius: 15px;
     margin: 15px 45px;
 }
 
-.form-signup h2  {
+.form-signup h2, .form-add-calon h2  {
     text-align: center;
 }
 

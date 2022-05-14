@@ -28,8 +28,24 @@ class AdminController extends Controller
 
     public function create()
     {
-        return view('admin.add-calon', [
+        $model = new CalonKetua;
+        return view('admin.add-calon', compact('model'), [
             'tittle' => "Add Calon"
         ]);
+    }
+
+    public function store(Request $request)
+    {
+        $validatedData = $request->validate([
+            'foto' => 'required',
+            'nama' => 'required',
+            'nim' => 'required',
+            'visi' => 'required',
+            'misi' => 'required',
+        ]);
+
+        CalonKetua::create($validatedData);
+
+        return redirect('/daftar-calon')->with('status', 'Add Data Succesfull!');
     }
 }

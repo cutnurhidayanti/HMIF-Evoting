@@ -13,16 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+        Schema::create('calon_ketuas', function (Blueprint $table) {
+            $table->id()->autoIncrement();
+            $table->string('foto');
+            $table->string('nama');
             $table->string('nim')->unique();
-            $table->string('password');
-            $table->string('confirm_password');
-            $table->string('email');
-            // $table->string('Status'); //belum yaaa
-            $table->timestamp('email_verified_at')->nullable();
-            $table->rememberToken();
+            $table->text('visi');
+            $table->text('misi');
             $table->timestamps();
         });
     }
@@ -34,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('calon_ketuas');
     }
 };

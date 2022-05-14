@@ -11,9 +11,13 @@
         
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 
         {{-- fav icon --}}
         <link rel="shortcut icon" href="img/informatics-logo-hd.png" type="image/x-icon">
+
+        {{-- custom css --}}
+        <link rel="stylesheet" href="css/user/signup.css">
 
         <title>HMIF | {{ $tittle }}</title>
     </head>
@@ -29,17 +33,16 @@
                 </div>
             </div>
             <div class="profil">
-                <h5>{{ auth()->user()->name}}</h5>
+                <h5>yanti</h5>
                 <img src="icon/nim-login.png" alt="person">
             </div>
         </div>
 
         {{-- Navbar --}}
         <div id="mySidenav" class="sidenav">
-            <a href="#" id="Beranda">Beranda</a>
-            <a href="#" id="Daftar-Calon">Daftar Calon</a>
-            <a href="#" id="Voting">Voting</a>
-            <a href="#" id="Real-Count">Real Count</a>
+            <a href="/beranda-admin" id="Beranda">Beranda</a>
+            <a href="/daftar-calon" id="Daftar-Calon">Daftar Calon</a>
+            <a href="/data-pemilih" id="data-pemilih">Data Pemilih</a>
             
             <form action="/logout" method="post">
                 @csrf
@@ -52,6 +55,7 @@
         </div>
         {{-- akhir Navbar --}}
 
+    
         <div class="container">
             @yield('container')
         </div>

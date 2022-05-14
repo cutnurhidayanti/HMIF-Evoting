@@ -34,16 +34,9 @@ class SignupController extends Controller
         return redirect('/user-login')->with('status', 'Registration Succesfull! please login');
     }
 
-    // public function confirmpass()
-    // {
-    //     return view('auth.confirm-password', [
-    //         'tittle' => "Confirm Password",
-    //     ]);
-    // }
-
     // public function confirmpass_algoritm(Request $request)
     // {
-    //     if (! Hash::check($request->password, $request->user()->password)) {
+    //     if (!Hash::check($request->password, $request->user()->password)) {
     //         return back()->withErrors([
     //             'password' => ['The provided password does not match our records.']
     //         ]);

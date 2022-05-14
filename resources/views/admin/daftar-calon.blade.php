@@ -3,6 +3,13 @@
 @section('container')
     <h3>Data Calon Ketua HMIF</h3>
     <a href="/add-calon" class="btn btn-info">+ Add New User</a><br><br>
+
+    @if(session()->has('status'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert" style="border-radius: 15px">
+            <strong>{{ session('status') }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
     
     <table class="table table-bordered mt-1" style="color: white">
         <tr>
@@ -22,7 +29,7 @@
                 <td>{{ $data_calon->nim }}</td>
                 <td>{{ $data_calon->visi }}</td>
                 <td>{{ $data_calon->misi }}</td>
-                <td>delete | update</td>
+                <td><i class="bi bi-trash3-fill"></i> | <i class="bi bi-pencil-square"></i></td>
             </tr>
         @endforeach
     </table>

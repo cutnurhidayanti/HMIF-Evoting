@@ -10,7 +10,7 @@
                     <h2>add calon</h2>
                     <form>
                         <div class="form-group">
-                            <img src="icon/nim-login.png" alt="icon-login">
+                            <label for="foto">Foto</label>
                             <input type="textarea" name="foto" class="form-control @error('foto') is-invalid @enderror" placeholder="foto" required>
                             @error('foto')
                             <div class="invalid-feedback">
@@ -19,7 +19,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <img src="icon/nim-login.png" alt="icon-login">
+                            <label for="nama">nama</label>
                             <input type="textarea" name="nama" class="form-control @error('nama') is-invalid @enderror" placeholder="nama" required>
                             @error('nama')
                                 <div class="invalid-feedback">
@@ -28,7 +28,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <img src="icon/nim-login.png" alt="icon-login">
+                            <label for="nim">NIM</label>
                             <input type="textarea" name="nim" class="form-control @error('nim') is-invalid @enderror" placeholder="NIM" required>
                             @error('nim')
                             <div class="invalid-feedback">
@@ -36,8 +36,8 @@
                             </div>
                             @enderror
                         </div>
+                        <label for="visi">Visi</label>
                         <div class="form-group">
-                            <img src="icon/nim-login.png" alt="icon-login">
                             <input type="textarea" name="visi" class="form-control @error('visi') is-invalid @enderror" placeholder="visi" required>
                             @error('visi')
                             <div class="invalid-feedback">
@@ -45,8 +45,8 @@
                             </div>
                             @enderror
                         </div>
+                        <label for="misi">Misi</label>
                         <div class="form-group">
-                            <img src="icon/nim-login.png" alt="icon-login">
                             <input type="textarea" name="misi" class="form-control @error('misi') is-invalid @enderror" placeholder="misi" required>
                             @error('misi')
                             <div class="invalid-feedback">

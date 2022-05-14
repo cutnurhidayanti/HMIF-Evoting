@@ -11,6 +11,7 @@
         
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 
         {{-- fav icon --}}
         <link rel="shortcut icon" href="img/informatics-logo-hd.png" type="image/x-icon">

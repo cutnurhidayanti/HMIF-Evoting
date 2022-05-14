@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CalonKetua;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -47,5 +48,15 @@ class AdminController extends Controller
         CalonKetua::create($validatedData);
 
         return redirect('/daftar-calon')->with('status', 'Add Data Succesfull!');
+    }
+
+    // pengelolaan data user
+    public function data_pemilih()
+    {
+        $data_Users = User::all();
+
+        return view('admin.data-pemilih', compact('data_Users'), [
+            'tittle' => "Data Pemilih",
+        ]);
     }
 }

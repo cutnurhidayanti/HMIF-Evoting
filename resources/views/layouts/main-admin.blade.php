@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="profil">
-                <h5>{{ auth()->user()->name}}</h5>
+                <h5>yanti</h5>
                 <img src="icon/nim-login.png" alt="person">
             </div>
         </div>
@@ -42,7 +42,7 @@
         <div id="mySidenav" class="sidenav">
             <a href="/beranda-admin" id="Beranda">Beranda</a>
             <a href="/daftar-calon" id="Daftar-Calon">Daftar Calon</a>
-            <a href="#" id="data-pemilih">Data Pemilih</a>
+            <a href="/data-pemilih" id="data-pemilih">Data Pemilih</a>
             
             <form action="/logout" method="post">
                 @csrf

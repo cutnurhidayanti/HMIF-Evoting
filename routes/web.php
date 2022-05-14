@@ -89,10 +89,16 @@ Route::get('/real-count', function () {
 });
 
 // bagian admin
+// login
 Route::get('/admin-login', [AdminController::class, 'index']);
 
+// beranda admin
+Route::get('/beranda-admin', [BerandaController::class, 'admin']);
+
+// calon ketua
 Route::get('/daftar-calon', [AdminController::class, 'data_calon']);
 Route::get('/add-calon', [AdminController::class, 'create']);
 Route::post('/add-calon', [AdminController::class, 'store']);
 
-Route::get('/beranda-admin', [BerandaController::class, 'admin']);
+// pengelolaan data user
+Route::get('/data-pemilih', [AdminController::class, 'data_pemilih']);

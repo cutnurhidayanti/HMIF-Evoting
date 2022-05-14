@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="profil">
-                <h5>{{ auth()->user()->name}}</h5>
+                <h5>yanti</h5>
                 <img src="icon/nim-login.png" alt="person">
             </div>
         </div>

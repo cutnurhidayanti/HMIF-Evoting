@@ -12,4 +12,11 @@ class BerandaController extends Controller
             'tittle' => 'Beranda',
         ]);
     }
+
+    public function admin()
+    {
+        return view('admin.beranda', [
+            'tittle' => 'Beranda',
+        ]);
+    }
 }

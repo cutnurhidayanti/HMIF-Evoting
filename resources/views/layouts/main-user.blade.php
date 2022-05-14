@@ -52,6 +52,7 @@
         </div>
         {{-- akhir Navbar --}}
 
+    
         <div class="container">
             @yield('container')
         </div>

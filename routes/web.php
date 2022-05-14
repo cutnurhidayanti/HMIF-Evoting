@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\LoginController;
@@ -25,10 +26,30 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/signup', [SignupController::class, 'index'])->middleware('guest');
 Route::post('/signup', [SignupController::class, 'store']);
-// Route::get('/confirm-password', [SignupController::class, 'confirmpass'])->name('password.confirm')->middleware('auth');
-// Route::get('/confirm-password', [SignupController::class, 'confirmpass_algoritm'])->middleware(['auth', 'throttle:6,1']);
+// Route::get('/signup', [SignupController::class, 'confirmpass_algoritm'])->middleware(['auth', 'throttle:6,1']);
+// Route::get('/signup', [SignupController::class, 'confirmpass'])->name('password.confirm')->middleware('auth');
+
+
+// confirm password
+// Route::get('/confirm-password', function () {
+//     return view('auth.confirm-password');
+// })->middleware('auth')->name('password.confirm');
+
+// Route::post('/confirm-password', function (Request $request) {
+//     if (!Hash::check($request->password, $request->user()->password)) {
+//         return back()->withErrors([
+//             'password' => ['The provided password does not match our records.']
+//         ]);
+//     }
+
+//     $request->session()->passwordConfirmed();
+
+//     return redirect()->intended();
+// })->middleware(['auth', 'throttle:6,1']);
+// akhir konfirmasi pass
 
 Route::get('/beranda', [BerandaController::class, 'index'])->middleware('auth');
+
 
 // bagian mahasiswa
 Route::get('/', function () { //fix
@@ -68,14 +89,8 @@ Route::get('/real-count', function () {
 });
 
 // bagian admin
-Route::get('/admin-login', function () {
-    return view('admin/admin-login', [
-        'tittle' => "Admin Login",
-    ]);
-});
+Route::get('/admin-login', [AdminController::class, 'index']);
+Route::get('/daftar-calon', [AdminController::class, 'data_calon']);
+Route::get('/add-calon', [AdminController::class, 'create']);
 
-Route::get('/main', function () {
-    return view('layouts/main', [
-        'tittle' => "main",
-    ]);
-});
+Route::get('/beranda-admin', [BerandaController::class, 'admin']);

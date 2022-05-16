@@ -99,6 +99,8 @@ Route::get('/beranda-admin', [BerandaController::class, 'admin']);
 Route::get('/daftar-calon', [AdminController::class, 'data_calon']);
 Route::get('/add-calon', [AdminController::class, 'create']);
 Route::post('/add-calon', [AdminController::class, 'store']);
+Route::delete('/admin/{id}', [AdminController::class, 'destroy']);
+Route::get('/admin/{id}/edit', [AdminController::class, 'edit']);
 
 // pengelolaan data user
 Route::get('/data-pemilih', [AdminController::class, 'data_pemilih']);

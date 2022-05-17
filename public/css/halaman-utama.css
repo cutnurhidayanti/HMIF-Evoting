@@ -35,6 +35,14 @@ body {
     padding-left: 4em;
 }
 
+.display-2 {
+    font-size: 65px;
+}
+
+.display-3 {
+    font-size: 50px;
+}
+
 #vote{
     padding-left: 2em;
 }

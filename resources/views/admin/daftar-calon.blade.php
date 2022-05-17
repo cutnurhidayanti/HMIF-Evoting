@@ -4,9 +4,9 @@
     <h3>Data Calon Ketua HMIF</h3>
     <a href="/add-calon" class="btn btn-info">+ Add New User</a><br><br>
 
-    @if(session()->has('status'))
+    @if(session()->has('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert" style="border-radius: 15px">
-            <strong>{{ session('status') }}</strong>
+            <strong>{{ session('success') }}</strong>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
@@ -29,7 +29,15 @@
                 <td>{{ $data_calon->nim }}</td>
                 <td>{{ $data_calon->visi }}</td>
                 <td>{{ $data_calon->misi }}</td>
-                <td><a href="#"><i class="bi bi-trash3-fill"></i></a> | <a href="#"><i class="bi bi-pencil-square"></i></a></td>
+                <td>
+                    <a href="/admin/{{ $data_calon->id}}/edit" class="badge bg-primary border-0"><i class="bi bi-pencil-square"></i></a>
+                    |
+                    <form action="/admin/{{ $data_calon->id}}"  method="post" class="d-inline">
+                        @csrf
+                        @method('delete')
+                        <button class="badge bg-danger border-0" onclick="return confirm('Are you sure?')"><i class="bi bi-trash3-fill"></i></button>
+                    </form> 
+                </td>
             </tr>
         @endforeach
     </table>

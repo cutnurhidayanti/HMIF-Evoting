@@ -47,7 +47,31 @@ class AdminController extends Controller
 
         CalonKetua::create($validatedData);
 
-        return redirect('/daftar-calon')->with('status', 'Add Data Succesfull!');
+        return redirect('/daftar-calon')->with('success', 'Add Data Succesfull!');
+    }
+
+    public function destroy($id) //belom fix
+    {
+        $post = CalonKetua::findOrFail($id);
+        $post->delete();
+        return redirect('/daftar-calon')->with('success', 'Data has been deleted!');
+    }
+
+    public function edit(CalonKetua $calonKetua)
+    {
+        $model = new CalonKetua;
+        return view('admin.edit-calon', compact('model'), [
+            'calon_ketua' => $calonKetua,
+            'tittle' => "Edit Calon"
+        ]);
+    }
+
+    public function update($id) //masih pending
+    {
+        $model = CalonKetua::find($id);
+        return view('admin.update-calon', compact('model'), [
+            'tittle' => "Add Calon"
+        ]);
     }
 
     // pengelolaan data user
@@ -55,7 +79,7 @@ class AdminController extends Controller
     {
         $data_Users = User::all();
 
-        return view('admin.data-pemilih', compact('data_Users'), [
+        return view('admin.data-pemilih', compact('datas_Users'), [
             'tittle' => "Data Pemilih",
         ]);
     }

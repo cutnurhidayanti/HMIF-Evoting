@@ -17,7 +17,7 @@
         <link rel="shortcut icon" href="img/informatics-logo-hd.png" type="image/x-icon">
 
         {{-- custom css --}}
-        <link rel="stylesheet" href="css/user/signup.css">
+        <link rel="stylesheet" href="css/admin/add-calon.css">
 
         <title>HMIF | {{ $tittle }}</title>
     </head>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="profil">
-                <h5>yanti</h5>
+                <h5>{{ auth()->user()->name}}</h5>
                 <img src="icon/nim-login.png" alt="person">
             </div>
         </div>
@@ -44,7 +44,7 @@
             <a href="/daftar-calon" id="Daftar-Calon">Daftar Calon</a>
             <a href="/data-pemilih" id="data-pemilih">Data Pemilih</a>
             
-            <form action="/logout" method="post">
+            <form action="/logout" method="post" class="border-0">
                 @csrf
                 {{-- <button>
                     <a href="#">Logout</a>

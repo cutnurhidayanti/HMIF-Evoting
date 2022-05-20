@@ -5,18 +5,17 @@
 <div class="row justify-content-center">
     <div class="col-md-5">
         <main class="form-add-calon">
-            <form action="/add-calon" method="post" class="daftar">
+            <form action="/add-calon" method="post" class="daftar" enctype="multipart/form-data">
                 @csrf
                     <h2>add calon</h2>
                     <form>
                         <div class="form-group">
                             {{-- untuk up foto --}}
-                            {{-- <div class="mb-3">
-                                <input class="form-control" name="foto" type="file" id="formFile" required>
-                            </div> --}}
-                            <label for="foto" class="form-label">foto</label>
-                            <input type="textarea" name="foto" class="form-control @error('foto') is-invalid @enderror" placeholder="foto" required>
-                            @error('foto')
+                            <label for="image" class="form-label">image</label>
+                            <div class="mb-3">
+                                <input class="form-control" name="image" type="file @error('image') is-invalid @enderror" id="image" required>
+                            </div>
+                            @error('image')
                             <div class="invalid-feedback">
                                 {{ $message  }}
                             </div>
@@ -64,6 +63,7 @@
                             </div>
                             @enderror
                         </div>
+                        
                         
                         
                         <center><div class="btn-regist mt-1 mb-1" type="submit">

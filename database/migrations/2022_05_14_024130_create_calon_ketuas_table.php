@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('calon_ketuas', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('foto');
+            $table->string('image')->nullable();
             $table->string('nama');
             $table->string('nim')->unique();
             $table->text('visi');

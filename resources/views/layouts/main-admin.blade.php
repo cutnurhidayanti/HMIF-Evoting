@@ -18,6 +18,8 @@
 
         {{-- custom css --}}
         <link rel="stylesheet" href="css/admin/add-calon.css">
+        <link rel="stylesheet" href="css/admin/beranda-admin.css">
+        <link rel="stylesheet" href="css/admin/time-setter.css">
 
         <title>HMIF | {{ $tittle }}</title>
     </head>
@@ -44,12 +46,8 @@
             <a href="/daftar-calon" id="Daftar-Calon">Daftar Calon</a>
             <a href="/data-pemilih" id="data-pemilih">Data Pemilih</a>
             
-            <form action="/logout" method="post" class="border-0">
+            <form action="/logout" method="post" class="logout">
                 @csrf
-                {{-- <button>
-                    <a href="#">Logout</a>
-                </button> --}}
-                
                 <button type="submit" id="Logout">Logout</button>
             </form>
         </div>

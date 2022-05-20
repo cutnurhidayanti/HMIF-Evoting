@@ -1,0 +1,22 @@
+.beranda-admin {
+    /* display: inline; */
+}
+
+.ber-admin {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+.gambar-admin {
+    background-color: #C2C4F9;
+    padding: 30px 20px;
+    /* text-align: center; */
+    margin: 40px;
+    border-radius: 15px;
+}
+.logout {
+    box-shadow:none;
+    border: 0;
+    outline:none;
+}

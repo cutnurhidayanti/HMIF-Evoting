@@ -17,6 +17,13 @@ class AdminController extends Controller
         ]);
     }
 
+    public function timesetter()
+    {
+        return view('admin/time-setter', [
+            'tittle' => "Time Setter",
+        ]);
+    }
+
     // pengelolaan data calon ketua
     public function data_calon()
     {
@@ -38,7 +45,7 @@ class AdminController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'foto' => 'required',
+            'image' => 'required',
             'nama' => 'required',
             'nim' => 'required',
             'visi' => 'required',
@@ -59,19 +66,25 @@ class AdminController extends Controller
 
     public function edit(CalonKetua $calonKetua)
     {
-        $model = new CalonKetua;
-        return view('admin.edit-calon', compact('model'), [
+        return view('admin.edit-calon', [
             'calon_ketua' => $calonKetua,
             'tittle' => "Edit Calon"
         ]);
     }
 
-    public function update($id) //masih pending
+    public function update(Request $request, $id) //masih pending
     {
-        $model = CalonKetua::find($id);
-        return view('admin.update-calon', compact('model'), [
-            'tittle' => "Add Calon"
+        $request->validate([
+            'foto' => 'required',
+            'nama' => 'required',
+            'nim' => 'required',
+            'visi' => 'required',
+            'misi' => 'required',
         ]);
+
+        $id->update($request->all());
+
+        return redirect('/daftar-calon')->with('success', 'Data has been updated!');
     }
 
     // pengelolaan data user
@@ -79,7 +92,7 @@ class AdminController extends Controller
     {
         $data_Users = User::all();
 
-        return view('admin.data-pemilih', compact('datas_Users'), [
+        return view('admin.data-pemilih', compact('data_Users'), [
             'tittle' => "Data Pemilih",
         ]);
     }

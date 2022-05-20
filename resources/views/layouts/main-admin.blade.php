@@ -46,7 +46,7 @@
             <a href="/daftar-calon" id="Daftar-Calon">Daftar Calon</a>
             <a href="/data-pemilih" id="data-pemilih">Data Pemilih</a>
             
-            <form action="/logout" method="post" class="border-0">
+            <form action="/logout" method="post" class="logout">
                 @csrf
                 <button type="submit" id="Logout">Logout</button>
             </form>

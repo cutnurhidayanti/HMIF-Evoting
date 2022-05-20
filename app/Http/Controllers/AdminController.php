@@ -45,7 +45,7 @@ class AdminController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'foto' => 'required',
+            'image' => 'required',
             'nama' => 'required',
             'nim' => 'required',
             'visi' => 'required',

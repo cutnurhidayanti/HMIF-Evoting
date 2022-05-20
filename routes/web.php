@@ -93,14 +93,26 @@ Route::get('/real-count', function () {
 Route::get('/admin-login', [AdminController::class, 'index']);
 
 // beranda admin
-Route::get('/beranda-admin', [BerandaController::class, 'admin']);
+Route::get('/beranda-admin', [BerandaController::class, 'berandaAdmin']);
 
 // calon ketua
 Route::get('/daftar-calon', [AdminController::class, 'data_calon']);
 Route::get('/add-calon', [AdminController::class, 'create']);
 Route::post('/add-calon', [AdminController::class, 'store']);
 Route::delete('/admin/{id}', [AdminController::class, 'destroy']);
-Route::get('/admin/{id}/edit', [AdminController::class, 'edit']);
+Route::get('/admin/{id}/edit', [AdminController::class, 'edit']); //bermasalah
+Route::put('/admin/{id}', [AdminController::class, 'update']); //bermasalah
+
+// time setter
+Route::get('/time-setter', [AdminController::class, 'timesetter']); //bermasalah
+
 
 // pengelolaan data user
 Route::get('/data-pemilih', [AdminController::class, 'data_pemilih']);
+
+
+Route::get('/edit-calon', function () { //fix
+    return view('admin/edit-calon', [
+        'tittle' => "Halaman edit",
+    ]);
+});

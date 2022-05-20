@@ -14,10 +14,10 @@ class BerandaController extends Controller
         ]);
     }
 
-    public function admin()
+    public function berandaAdmin()
     {
-        return view('admin.beranda', [
-            'tittle' => 'Beranda',
+        return view('admin/beranda-admin', [
+            'tittle' => "Beranda Admin",
         ]);
     }
 }

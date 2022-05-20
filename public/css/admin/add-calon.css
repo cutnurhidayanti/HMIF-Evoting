@@ -49,6 +49,12 @@ body {
     margin: 15px 0px;
 } 
 
+.form-edit-calon {
+    background-color: white;
+    border-radius: 15px;
+    margin: 15px 0px;
+} 
+
 .form-add-calon h2  {
     text-align: center;
 }
@@ -111,6 +117,7 @@ a {
     padding: 15px 15px;
     color: black;
 }
+
 
 
 

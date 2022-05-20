@@ -44,10 +44,6 @@
             
             <form action="/logout" method="post">
                 @csrf
-                {{-- <button>
-                    <a href="#">Logout</a>
-                </button> --}}
-                
                 <button type="submit" id="Logout">Logout</button>
             </form>
         </div>

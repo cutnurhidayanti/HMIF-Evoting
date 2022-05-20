@@ -18,6 +18,8 @@
 
         {{-- custom css --}}
         <link rel="stylesheet" href="css/admin/add-calon.css">
+        <link rel="stylesheet" href="css/admin/beranda-admin.css">
+        <link rel="stylesheet" href="css/admin/time-setter.css">
 
         <title>HMIF | {{ $tittle }}</title>
     </head>
@@ -46,10 +48,6 @@
             
             <form action="/logout" method="post" class="border-0">
                 @csrf
-                {{-- <button>
-                    <a href="#">Logout</a>
-                </button> --}}
-                
                 <button type="submit" id="Logout">Logout</button>
             </form>
         </div>

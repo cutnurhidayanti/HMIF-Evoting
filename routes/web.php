@@ -111,6 +111,7 @@ Route::get('/time-setter', [AdminController::class, 'timesetter']); //bermasalah
 
 // pengelolaan data user
 Route::get('/data-pemilih', [AdminController::class, 'data_pemilih']);
+Route::delete('/admin/{id}', [AdminController::class, 'destroyuser']);
 
 
 Route::get('/edit-calon', function () { //fix

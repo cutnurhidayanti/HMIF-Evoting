@@ -8,18 +8,17 @@
             <form action="/add-calon" method="post" class="daftar" enctype="multipart/form-data">
                 @csrf
                     <h2>add calon</h2>
-                    <form>
                         <div class="form-group">
                             {{-- untuk up foto --}}
-                            <label for="image" class="form-label">image</label>
                             <div class="mb-3">
-                                <input class="form-control" name="image" type="file @error('image') is-invalid @enderror" id="image" required>
+                                <label for="image" class="form-image">image</label>
+                                <input class="form-control" name="image" type="file" id="image" required>
                             </div>
-                            @error('image')
+                            {{-- @error('image')
                             <div class="invalid-feedback">
                                 {{ $message  }}
                             </div>
-                            @enderror
+                            @enderror --}}
                         </div>
                         <div class="form-group">
                             <label for="nama" class="form-label">Nama</label>
@@ -74,7 +73,6 @@
                             </button>
                         </div></center>
     
-                    </form>
             </form>
         </main>
     </div>

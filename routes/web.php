@@ -26,6 +26,8 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/signup', [SignupController::class, 'index'])->middleware('guest');
 Route::post('/signup', [SignupController::class, 'store']);
+
+    
 // Route::get('/signup', [SignupController::class, 'confirmpass_algoritm'])->middleware(['auth', 'throttle:6,1']);
 // Route::get('/signup', [SignupController::class, 'confirmpass'])->name('password.confirm')->middleware('auth');
 

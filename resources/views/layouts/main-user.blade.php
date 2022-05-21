@@ -32,6 +32,10 @@
             <div class="profil">
                 <h5>{{ auth()->user()->name}}</h5>
                 <img src="icon/nim-login.png" alt="person">
+                <form action="/logout" method="post">
+                    @csrf
+                    <button type="submit" id="Logout">Logout</button>
+                </form>
             </div>
         </div>
 
@@ -42,10 +46,7 @@
             <a href="#" id="Voting">Voting</a>
             <a href="#" id="Real-Count">Real Count</a>
             
-            <form action="/logout" method="post">
-                @csrf
-                <button type="submit" id="Logout">Logout</button>
-            </form>
+            
         </div>
         {{-- akhir Navbar --}}
 

@@ -28,7 +28,17 @@ body{
 }
 
 .profil img {
-    /* margin-right: 15px; */
+    margin: 0 15px;
+}
+
+.profil > h5{
+    padding: 10px 0;
+}
+
+.profil > form{
+    padding: 10px 0;
+    text-decoration: none;
+    margin: 0;
 }
 
 .navbar-brand{
@@ -83,7 +93,8 @@ body{
   }
 
   #Logout {
-    top: 260px;
+    margin: 0;
     background-color: #C2C4F9; /* Red */
   }
+
   

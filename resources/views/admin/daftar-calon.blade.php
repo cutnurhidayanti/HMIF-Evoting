@@ -24,7 +24,13 @@
         @foreach ($data_calons as $data_calon)
             <tr>
                 <td>{{ $data_calon->id }}</td>
-                <td>{{ $data_calon->foto }}</td>
+                <td>
+                    @if($data_calon->image)
+                        <img src="{{ asset('storage/'.$data_calon->image) }}" alt="calon-img" class="img-fluid mt-3">
+                    @else
+                        <img src="img/profil-ketua.png" alt="calon-img" class="img-fluid mt-3">
+                    @endif
+                </td>
                 <td>{{ $data_calon->nama }}</td>
                 <td>{{ $data_calon->nim }}</td>
                 <td>{{ $data_calon->visi }}</td>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\CalonKetua;
 use App\Models\User;
+use Illuminate\Contracts\Cache\Store;
 
 class AdminController extends Controller
 {
@@ -45,19 +46,25 @@ class AdminController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'image' => 'required',
+            'image' => 'image|file|max:1024',
             'nama' => 'required',
             'nim' => 'required',
             'visi' => 'required',
             'misi' => 'required',
         ]);
 
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('calon-ketua-img');
+        } else {
+            $validatedData['image'] = $request->file('img/profil-ketua.png')->store('calon-ketua-img');
+        }
+
         CalonKetua::create($validatedData);
 
         return redirect('/daftar-calon')->with('success', 'Add Data Succesfull!');
     }
 
-    public function destroy($id) //belom fix
+    public function destroy($id)
     {
         $post = CalonKetua::findOrFail($id);
         $post->delete();
@@ -95,5 +102,12 @@ class AdminController extends Controller
         return view('admin.data-pemilih', compact('data_Users'), [
             'tittle' => "Data Pemilih",
         ]);
+    }
+
+    public function destroyuser($id)
+    {
+        $post = User::findOrFail($id);
+        $post->delete();
+        return redirect('/data-pemilih')->with('success', 'Data has been deleted!');
     }
 }

@@ -37,7 +37,12 @@
             <div class="profil">
                 <h5>{{ auth()->user()->name}}</h5>
                 <img src="icon/nim-login.png" alt="person">
+                <form action="/logout" method="post" class="logout">
+                @csrf
+                <button type="submit" id="Logout">Logout</button>
+            </form>
             </div>
+
         </div>
 
         {{-- Navbar --}}
@@ -46,10 +51,7 @@
             <a href="/daftar-calon" id="Daftar-Calon">Daftar Calon</a>
             <a href="/data-pemilih" id="data-pemilih">Data Pemilih</a>
             
-            <form action="/logout" method="post" class="logout">
-                @csrf
-                <button type="submit" id="Logout">Logout</button>
-            </form>
+            
         </div>
         {{-- akhir Navbar --}}
 

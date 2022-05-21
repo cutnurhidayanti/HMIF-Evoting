@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\user;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -60,14 +61,20 @@ Route::get('/', function () { //fix
     ]);
 });
 
+Route::get('/beranda', function(){
+    return view('user/beranda', [
+        'tittle' => "Beranda",
+    ]);
+});
+
 Route::get('/profil', function () {
     return view('user/profil', [
         'tittle' => "Profil User",
     ]);
 });
 
-Route::get('/daftar-calon', function () {
-    return view('user/daftar-calon', [
+Route::get('/daftar', function () {
+    return view('user/daftar', [
         'tittle' => "Daftar Calon",
     ]);
 });

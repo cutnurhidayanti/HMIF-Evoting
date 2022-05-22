@@ -4,6 +4,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
+
 use App\Http\Controllers\user;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -85,11 +87,8 @@ Route::get('/deskripsi-calon', function () {
     ]);
 });
 
-Route::get('/voting', function () {
-    return view('user/voting', [
-        'tittle' => "Voting",
-    ]);
-});
+
+Route::GET('/voting', [UserController::class, 'votingPage']);
 
 Route::get('/real-count', function () {
     return view('user/real-count', [

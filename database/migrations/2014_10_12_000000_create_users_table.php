@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('confirm_password');
             $table->string('email');
+            $table->boolean('Status');
             // $table->string('Status'); //belum yaaa
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();

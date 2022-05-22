@@ -16,7 +16,7 @@ class BerandaController extends Controller
 
     public function berandaAdmin()
     {
-        return view('admin/beranda-admin', [
+        return view('admin/Beranda-admin', [
             'tittle' => "Beranda Admin",
         ]);
     }

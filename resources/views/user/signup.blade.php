@@ -31,7 +31,7 @@
                     <form action="/signup" method="post" class="daftar">
                         @csrf
                             <h2>Register</h2>
-                            <form>
+                           
                                 <div class="form-group">
                                     <img src="icon/nim-login.png" alt="icon-login">
                                     <input type="textarea" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="name" required>
@@ -78,18 +78,16 @@
                                     @enderror
                                 </div>
                                 
-                                <center><div class="btn-regist mt-1 mb-1" type="submit">
+                                 <center><div class="btn-regist mt-1 mb-1" type="submit">
                                     <button>
-                                        <a href="user-login">
                                             <img src="icon/signup.png" alt="signup-btn" style="height: 60px">
-                                        </a>
                                     </button>
                                 </div></center>
             
                                 <div class="container-signin" style="text-align: center">
                                     <p>Already have an account? <a href="user-login">Sign in</a></p>
                                 </div>
-                            </form>
+                           
                     </form>
                 </main>
             </div>

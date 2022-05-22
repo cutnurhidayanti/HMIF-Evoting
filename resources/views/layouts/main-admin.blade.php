@@ -42,6 +42,7 @@
                     <button type="submit" id="Logout">Logout</button>
                 </form>
             </div>
+
         </div>
 
         {{-- Navbar --}}

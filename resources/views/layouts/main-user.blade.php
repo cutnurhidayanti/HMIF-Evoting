@@ -43,8 +43,8 @@
         <div id="mySidenav" class="sidenav">
             <a href="/beranda" id="Beranda">Beranda</a>
             <a href="/daftar" id="Daftar-Calon">Daftar Calon</a>
-            <a href="#" id="Voting">Voting</a>
-            <a href="#" id="Real-Count">Real Count</a>
+            <a href="/voting" id="Voting">Voting</a>
+            <a href="/real-count" id="Real-Count">Real Count</a>
             
             
         </div>

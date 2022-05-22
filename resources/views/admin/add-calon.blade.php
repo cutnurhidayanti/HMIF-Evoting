@@ -67,9 +67,7 @@
                         
                         <center><div class="btn-regist mt-1 mb-1" type="submit">
                             <button>
-                                <a href="daftar-calon">
                                     <img src="icon/signup.png" alt="signup-btn" style="height: 60px">
-                                </a>
                             </button>
                         </div></center>
     

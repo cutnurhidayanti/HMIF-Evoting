@@ -97,6 +97,10 @@ Route::get('/real-count', function () {
     ]);
 });
 
+// bagian voter
+Route::get('/daftar', [AdminController::class, 'calon']);
+
+
 // bagian admin
 // login
 Route::get('/admin-login', [AdminController::class, 'index']);

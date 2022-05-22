@@ -49,6 +49,7 @@
             <a href="/beranda-admin" id="Beranda">Beranda</a>
             <a href="/daftar-calon" id="Daftar-Calon">Daftar Calon</a>
             <a href="/data-pemilih" id="data-pemilih">Data Pemilih</a>
+            <a href="/time-setter" id="time-setter">Time Setter</a>
             
             
         </div>

@@ -110,4 +110,13 @@ class AdminController extends Controller
         $post->delete();
         return redirect('/data-pemilih')->with('success', 'Data has been deleted!');
     }
+
+    public function calon()
+    {
+        $data_calons = CalonKetua::all();
+
+        return view('user/daftar', compact('data_calons'), [
+            'tittle' => "Daftar Calon"
+        ]);
+    }
 }

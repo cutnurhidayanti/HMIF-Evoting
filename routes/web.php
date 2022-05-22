@@ -63,11 +63,11 @@ Route::get('/', function () { //fix
     ]);
 });
 
-Route::get('/beranda', function(){
-    return view('user/beranda', [
-        'tittle' => "Beranda",
-    ]);
-});
+// Route::get('/beranda', function(){
+//     return view('user/beranda', [
+//         'tittle' => "Beranda",
+//     ]);
+// });
 
 Route::get('/profil', function () {
     return view('user/profil', [
@@ -75,11 +75,7 @@ Route::get('/profil', function () {
     ]);
 });
 
-Route::get('/daftar', function () {
-    return view('user/daftar', [
-        'tittle' => "Daftar Calon",
-    ]);
-});
+
 
 Route::get('/deskripsi-calon', function () {
     return view('user/deskripsi-calon', [
@@ -88,16 +84,19 @@ Route::get('/deskripsi-calon', function () {
 });
 
 
+Route::GET('/real-count',[UserController::class, 'countPage']);
+Route::GET('/beranda',[UserController::class, 'berandaPage']);
+Route::GET('/daftar', [UserController::class, 'daftarCalon']);
 Route::GET('/voting', [UserController::class, 'votingPage']);
-
-Route::get('/real-count', function () {
-    return view('user/real-count', [
-        'tittle' => "Real Count",
-    ]);
-});
+Route::PUT('/voting/', [UserController::class, 'voting']);
+// Route::get('/real-count', function () {
+//     return view('user/real-count', [
+//         'tittle' => "Real Count",
+//     ]);
+// });
 
 // bagian voter
-Route::get('/daftar', [AdminController::class, 'calon']);
+// Route::get('/daftar', [AdminController::class, 'calon']);
 
 
 // bagian admin
@@ -130,8 +129,8 @@ Route::get('/edit-calon', function () { //fix
     ]);
 });
 
-Route::get('/daftar', function () {
-    return view('user/daftar', [
-        'tittle' => "Daftar Calon",
-    ]);
-});
+// Route::get('/daftar', function () {
+//     return view('user/daftar', [
+//         'tittle' => "Daftar Calon",
+//     ]);
+// });

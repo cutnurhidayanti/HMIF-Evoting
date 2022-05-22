@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('nim')->unique();
             $table->text('visi');
             $table->text('misi');
+            $table->integer('total_suara')->default(0);
             $table->timestamps();
         });
     }

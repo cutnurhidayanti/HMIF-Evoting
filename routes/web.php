@@ -97,6 +97,10 @@ Route::get('/real-count', function () {
     ]);
 });
 
+// bagian voter
+Route::get('/daftar', [AdminController::class, 'calon']);
+
+
 // bagian admin
 // login
 Route::get('/admin-login', [AdminController::class, 'index']);
@@ -124,5 +128,11 @@ Route::delete('/admin/{id}', [AdminController::class, 'destroyuser']);
 Route::get('/edit-calon', function () { //fix
     return view('admin/edit-calon', [
         'tittle' => "Halaman edit",
+    ]);
+});
+
+Route::get('/daftar', function () {
+    return view('user/daftar', [
+        'tittle' => "Daftar Calon",
     ]);
 });

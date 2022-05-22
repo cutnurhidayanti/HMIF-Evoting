@@ -38,9 +38,9 @@
                 <h5>{{ auth()->user()->name}}</h5>
                 <img src="icon/nim-login.png" alt="person">
                 <form action="/logout" method="post" class="logout">
-                @csrf
-                <button type="submit" id="Logout">Logout</button>
-            </form>
+                    @csrf
+                    <button type="submit" id="Logout">Logout</button>
+                </form>
             </div>
 
         </div>
@@ -50,6 +50,7 @@
             <a href="/beranda-admin" id="Beranda">Beranda</a>
             <a href="/daftar-calon" id="Daftar-Calon">Daftar Calon</a>
             <a href="/data-pemilih" id="data-pemilih">Data Pemilih</a>
+            <a href="/time-setter" id="time-setter">Time Setter</a>
             
             
         </div>

@@ -22,7 +22,7 @@
                 <td>{{ $data_user->id }}</td>
                 <td>{{ $data_user->name }}</td>
                 <td>{{ $data_user->nim }}</td>
-                {{-- <td>{{ $data_user->status }}</td> --}}
+                <td>{{ $data_user->status }}</td>
                 <td>
                     <a href="/admin/{{ $data_user->id}}/edit" class="badge bg-primary border-0"><i class="bi bi-pencil-square"></i></a>
                     |

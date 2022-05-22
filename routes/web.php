@@ -130,3 +130,9 @@ Route::get('/edit-calon', function () { //fix
         'tittle' => "Halaman edit",
     ]);
 });
+
+Route::get('/daftar', function () {
+    return view('user/daftar', [
+        'tittle' => "Daftar Calon",
+    ]);
+});

@@ -30,7 +30,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/signup', [SignupController::class, 'index'])->middleware('guest');
 Route::post('/signup', [SignupController::class, 'store']);
 
-    
+
 // Route::get('/signup', [SignupController::class, 'confirmpass_algoritm'])->middleware(['auth', 'throttle:6,1']);
 // Route::get('/signup', [SignupController::class, 'confirmpass'])->name('password.confirm')->middleware('auth');
 
@@ -84,8 +84,8 @@ Route::get('/deskripsi-calon', function () {
 });
 
 
-Route::GET('/real-count',[UserController::class, 'countPage']);
-Route::GET('/beranda',[UserController::class, 'berandaPage']);
+Route::GET('/real-count', [UserController::class, 'countPage']);
+Route::GET('/beranda', [UserController::class, 'berandaPage']);
 Route::GET('/daftar', [UserController::class, 'daftarCalon']);
 Route::GET('/voting', [UserController::class, 'votingPage']);
 Route::PUT('/voting/', [UserController::class, 'voting']);
@@ -104,7 +104,7 @@ Route::PUT('/voting/', [UserController::class, 'voting']);
 Route::get('/admin-login', [AdminController::class, 'index']);
 
 // beranda admin
-Route::get('/beranda-admin', [BerandaController::class, 'berandaAdmin']);
+Route::get('/beranda-admin', [AdminController::class, 'berandaAdmin']);
 
 // calon ketua
 Route::get('/daftar-calon', [AdminController::class, 'data_calon']);
